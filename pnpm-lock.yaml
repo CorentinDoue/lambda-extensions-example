@@ -9,6 +9,7 @@ specifiers:
   aws-cdk-lib: ^2.77.0
   constructs: ^10.2.9
   esbuild: ^0.16.17
+  lambda-extension-service: ^0.0.1
   msw: ^1.2.1
   node-fetch: ^3.3.1
   prettier: ^2.8.8
@@ -23,6 +24,7 @@ dependencies:
   '@aws-cdk/aws-apigatewayv2-integrations-alpha': 2.77.0-alpha.0_a55c3alecufnetbpbqcmci63da
   aws-cdk-lib: 2.77.0_constructs@10.2.9
   constructs: 10.2.9
+  lambda-extension-service: 0.0.1
   msw: 1.2.1_typescript@4.9.4
   node-fetch: 3.3.1
   prettier: 2.8.8
@@ -2205,6 +2207,12 @@ packages:
 
   /jsonschema/1.4.1:
     resolution: {integrity: sha512-S6cATIPVv1z0IlxdN+zUk5EPjkGCdnhN4wVSBlvoUO1tOLJootbo9CquNJmbIh4yikWHiUedhRYrNPn1arpEmQ==}
+
+  /lambda-extension-service/0.0.1:
+    resolution: {integrity: sha512-6XLxjqnpMFP81eAW2Q4b8Ub8kLMwQHOcdl2vzo6a4DxPQlcMkcl6KsomUehUJFBXvnylblGleMSFMIV2ytdStg==}
+    dependencies:
+      node-fetch: 3.3.1
+    dev: false
 
   /local-pkg/0.4.3:
     resolution: {integrity: sha512-SFppqq5p42fe2qcZQqqEOiVRXl+WCP1MdT6k7BDEW1j++sp5fIY+/fdRQitvKgB5BrBcmrs5m/L0v2FrU5MY1g==}

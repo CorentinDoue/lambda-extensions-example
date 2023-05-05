@@ -13,7 +13,7 @@
     "cdk": "cdk",
     "deploy": "pnpm build:layer && cdk deploy",
     "start": "cdk watch",
-    "build:layer": "./node_modules/.bin/esbuild  ./src/layers/interceptorExtension/interceptor.ts --bundle --outfile='./src/layers/interceptorExtension/interceptor.js' --platform=node"
+    "build:layer": "./node_modules/.bin/esbuild  ./src/layers/interceptorExtension/interceptor.ts --bundle --outfile='./src/layers/interceptorExtension/interceptor.js' --platform=node --main-fields=module,main"
   },
   "devDependencies": {
     "@swarmion/integration-tests": "^0.27.0",
@@ -30,6 +30,7 @@
     "@aws-cdk/aws-apigatewayv2-integrations-alpha": "^2.77.0-alpha.0",
     "aws-cdk-lib": "^2.77.0",
     "constructs": "^10.2.9",
+    "lambda-extension-service": "^0.0.1",
     "msw": "^1.2.1",
     "node-fetch": "^3.3.1",
     "prettier": "^2.8.8",
