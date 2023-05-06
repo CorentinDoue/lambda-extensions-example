@@ -13,7 +13,9 @@
     "cdk": "cdk",
     "deploy": "pnpm build:layer && cdk deploy",
     "start": "cdk watch",
-    "build:layer": "./node_modules/.bin/esbuild  ./src/layers/interceptorExtension/interceptor.ts --bundle --outfile='./dist/layers/interceptorExtension/interceptor.js' --platform=node --main-fields=module,main"
+    "build:layer": "(rm -r dist || true) && pnpm build:interceptor && pnpm build:monitor && cp -r ./src/layers/interceptorExtension/extensions ./dist/layers/interceptorExtension/extensions",
+    "build:interceptor": "./node_modules/.bin/esbuild  ./src/layers/interceptorExtension/interceptor.ts --bundle --outfile='./dist/layers/interceptorExtension/interceptor.js' --platform=node --main-fields=module,main",
+    "build:monitor": "./node_modules/.bin/esbuild  src/layers/interceptorExtension/monitor/index.ts --bundle --outfile='./dist/layers/interceptorExtension/monitor.js' --platform=node --main-fields=module,main --banner:js='#!/usr/bin/env node'"
   },
   "devDependencies": {
     "@swarmion/integration-tests": "^0.27.0",
