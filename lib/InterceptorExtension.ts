@@ -18,7 +18,7 @@ export class InterceptorExtension
     this.layerVersion = new LayerVersion(scope, "InterceptorLayer", {
       compatibleRuntimes: [Runtime.NODEJS_18_X],
       compatibleArchitectures: [Architecture.ARM_64],
-      code: Code.fromAsset("src/layers/interceptorExtension"),
+      code: Code.fromAsset("dist/layers/interceptorExtension"),
     });
     this.entryPoint = "interceptor.js";
   }

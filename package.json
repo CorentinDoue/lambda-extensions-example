@@ -13,7 +13,7 @@
     "cdk": "cdk",
     "deploy": "pnpm build:layer && cdk deploy",
     "start": "cdk watch",
-    "build:layer": "./node_modules/.bin/esbuild  ./src/layers/interceptorExtension/interceptor.ts --bundle --outfile='./src/layers/interceptorExtension/interceptor.js' --platform=node --main-fields=module,main"
+    "build:layer": "./node_modules/.bin/esbuild  ./src/layers/interceptorExtension/interceptor.ts --bundle --outfile='./dist/layers/interceptorExtension/interceptor.js' --platform=node --main-fields=module,main"
   },
   "devDependencies": {
     "@swarmion/integration-tests": "^0.27.0",
