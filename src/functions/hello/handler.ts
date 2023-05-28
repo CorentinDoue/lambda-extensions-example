@@ -1,9 +1,10 @@
 import fetch from "node-fetch";
+import { TEST_HTTP_CALLS_URL } from "../../urls";
 
 export const hello = async () => {
-  await fetch("https://webhook.site/87c3df17-c965-40d9-a616-790c4002a162");
+  await fetch(TEST_HTTP_CALLS_URL);
 
-  await fetch("https://webhook.site/87c3df17-c965-40d9-a616-790c4002a162", {
+  await fetch(TEST_HTTP_CALLS_URL, {
     method: "POST",
     body: JSON.stringify({
       message: "hello world",

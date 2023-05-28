@@ -7,6 +7,8 @@ This example shows how to create a simple Lambda with a monitoring tool composed
 
 ## Install
 
+Change the `https://webhook.site/*` urls in `src/urls.ts` to your own webhook urls.
+
 ```bash
  pnpm install
  pnpm cdk bootstrap
