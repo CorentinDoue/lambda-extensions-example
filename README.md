@@ -4,6 +4,7 @@ This example shows how to create a simple Lambda with a monitoring tool composed
 - an internal extension that logs all http calls made by the Lambda
 - an external extension that aggregate those logs and send them to an hypothetical monitoring tool
 
+![monitor extensions schema](./monitor-schema.png)
 
 ## Install
 
