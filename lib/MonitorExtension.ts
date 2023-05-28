@@ -7,7 +7,7 @@ import {
 } from "aws-cdk-lib/aws-lambda";
 import { Construct } from "constructs";
 
-export class InterceptorExtension
+export class MonitorExtension
   extends Construct
   implements NodejsInternalExtension
 {
@@ -15,10 +15,10 @@ export class InterceptorExtension
   public readonly entryPoint: string;
   constructor(scope: Construct, id: string) {
     super(scope, id);
-    this.layerVersion = new LayerVersion(scope, "InterceptorLayer", {
+    this.layerVersion = new LayerVersion(scope, "MonitorLayer", {
       compatibleRuntimes: [Runtime.NODEJS_18_X],
       compatibleArchitectures: [Architecture.ARM_64],
-      code: Code.fromAsset("dist/layers/interceptorExtension"),
+      code: Code.fromAsset("dist/layers/monitorExtension"),
     });
     this.entryPoint = "interceptor.js";
   }

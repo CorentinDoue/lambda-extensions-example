@@ -7,7 +7,7 @@ import { TestEnvVar } from "@swarmion/integration-tests";
 import { NodejsFunction } from "aws-cdk-lib/aws-lambda-nodejs";
 import { HttpLambdaIntegration } from "@aws-cdk/aws-apigatewayv2-integrations-alpha";
 import { applyNodejsInternalExtension } from "./applyNodejsInternalExtension";
-import { InterceptorExtension } from "./InterceptorExtension";
+import { MonitorExtension } from "./MonitorExtension";
 
 export class AppStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
@@ -33,7 +33,7 @@ export class AppStack extends cdk.Stack {
 
     applyNodejsInternalExtension(
       helloFunction,
-      new InterceptorExtension(this, "InterceptorExtension")
+      new MonitorExtension(this, "InterceptorExtension")
     );
 
     const syncNftIntegration = new HttpLambdaIntegration(
